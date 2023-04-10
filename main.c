@@ -123,7 +123,8 @@ void playState(void) {
   slayers.x = 20;
   slayers.y = 0;
   ghost1s.x = randint(30,70);
-  ghost1s.y = randint(20,80);
+  ghost1s.y = randint(30,80);
+  
   ghost2s.x = randint(70,110);
   ghost2s.y = randint(90,150);
   ghost3s.x = randint(110,139);
@@ -255,8 +256,8 @@ void moveGhost1(void) {
   if (*col > 86 - GHOST1_WIDTH) { // bounds for right
     *col = 86 - GHOST1_WIDTH;
     direction = -1;   // choose a new direction
-  } else if (*col < 20) { // bounds for left
-    *col = 20;
+  } else if (*col < 27) { // bounds for left
+    *col = 27;
     direction = -1; // choose a new direction
   }
   
